@@ -14,10 +14,10 @@
 //     // other effects you can use on a jQuery-wrapped html tag.
 //     blinkyDancer.$node.toggle();
 //   };
-
+//
 //   return blinkyDancer;
 // };
-
+//
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   //this.oldStep = this.step; // this.step is makeDancer's step
