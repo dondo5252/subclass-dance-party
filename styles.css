@@ -1,10 +1,36 @@
+@keyframes boogey {
+  0% {
+    transform: rotate(0deg)
+}
+50% {
+  transform: rotate(45deg)
+}
+100% {
+transform: rotate(0deg)
+}
+}
+
+ @keyframes slide {
+  0% {
+    transform: translate(10px)
+  }
+  50% {
+    transform: translate(50px)
+  }
+  100% {
+    transform: translate(10px)
+  }
+}
+
 body, html{
   height:100%;
+  overflow: hidden;
 }
 body{
   margin: 0px;
   background-color:#444;
   font-size: 18px;
+  background: url('https://i.imgur.com/G7iRjW0.jpg');
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -24,5 +50,31 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   /* border-radius:10px; */
   position:absolute;
+  transition: all 500ms ease-and-out;
 }
 
+span {
+  display: block;
+  max-width: 200px;
+}
+
+img {
+  width: 100%;
+}
+
+.spin {
+  /* object-fit: cover; */
+  animation: boogey 500ms infinite;
+  /* border:10px solid rgb(81, 255, 0); */
+  border: none;
+}
+/*            name   speed  - how many times */
+.slide {
+  border: none;
+  animation: slide 600ms infinite;
+
+}
+
+.slide img {
+  width: 150px;
+}
